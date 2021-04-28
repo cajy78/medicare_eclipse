@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="1" ignored="0" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="68611" started-at="2021-04-28T21:26:50 IST" finished-at="2021-04-28T21:27:59 IST">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="68611" started-at="2021-04-28T21:26:50 IST" finished-at="2021-04-28T21:27:59 IST">
+      <class name="testcases.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testcases.TestRunner@4b553d26]" name="setUpClass" is-config="true" duration-ms="1805" started-at="2021-04-28T21:26:50 IST" finished-at="2021-04-28T21:26:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" duration-ms="33278" started-at="2021-04-28T21:26:52 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-28T21:27:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin user adds a product"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Admin user add product]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="SKIP" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" duration-ms="20731" started-at="2021-04-28T21:27:25 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-28T21:27:46 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin user adds a product"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Admin user add product]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Login was successful; however, the account is not an admin account]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Login was successful; however, the account is not an admin account
+at testcases.AdminUserTests.adminUserLogin(AdminUserTests.java:90)
+at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:35)
+at ✽.admin user successfully signs in to the site with kn@gmail.com and 12345(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" duration-ms="12512" started-at="2021-04-28T21:27:46 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-28T21:27:59 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin user adds a product"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Admin user add product]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Category test data is not one of available categories. Please consult the available application categories and try again]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Category test data is not one of available categories. Please consult the available application categories and try again
+at testcases.AdminUserTests.enterProdDetails(AdminUserTests.java:125)
+at stepdef.AdminUserAddMedicine.user_navigates_to_manage_product_and_enters_(AdminUserAddMedicine.java:49)
+at ✽.user navigates to manage product and enters PQSyrup45, AZCoughSyrupBrand45_name, ABSyrup45_Test product, 40, 200, test(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testcases.TestRunner@4b553d26]" name="tearDownClass" is-config="true" duration-ms="153" started-at="2021-04-28T21:27:59 IST" finished-at="2021-04-28T21:27:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testcases.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

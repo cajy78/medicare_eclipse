@@ -10,5 +10,5 @@ Feature: Enable Users To Create Accounts
 
     Examples: 
       | firstname | lastname  | email                   | contactnumber | password   | addressl1 | addressl2 | city    | postcode | state   | country |
-      | Cajetan   | Fernandes | test@test999.com        |    7894561234 |    1234567 | line1     | line2     | CityAre |   400789 | Swindon | England |
+      | Cajetan   | Fernandes | test@testing92.com      |    7894561234 |    1234567 | line1     | line2     | CityAre |   400789 | Swindon | England |
       | Cajetan   | Fernandes | testing@testng34841.com |    9874561237 | testingPwd | Line123   |        53 | APCIty  |   965147 | Thane   | India   |

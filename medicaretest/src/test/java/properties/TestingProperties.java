@@ -68,4 +68,17 @@ public class TestingProperties {
 			scriptLocation = prop.getProperty("medicon.autoit.firefox");
 		return scriptLocation;
 	}
+	
+	public static String getSSLocation() {
+		getPropertiesFile();
+		return prop.getProperty("ss.loc");
+	}
+	
+	public static boolean ssEnabled() {
+		getPropertiesFile();
+		boolean ss = false;
+		if(prop.getProperty("ss.enabled").equals("true"))
+			ss=true;
+		return ss;
+	}
 }

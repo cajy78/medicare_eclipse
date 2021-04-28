@@ -36,6 +36,7 @@ public class PurchaseTest extends TestCase {
 			homePage.loginLinkClick();
 			loginPage = new Login(driver);
 			loginPage.enterLoginCredentials(uname, pwd);
+			Pages.takeSS(driver, "PurchaseTests_credentialsEntered");
 			loginPage.getLoginButton().click();
 			if (driver.getTitle().equalsIgnoreCase("Medicare - Home")) {
 				node.log(LogStatus.PASS, "Site login was successful via : " + uname);
@@ -84,6 +85,7 @@ public class PurchaseTest extends TestCase {
 					Cart cartLocal = new Cart(driver);
 					cartLocal.waitForInvisbilityOfElement(driver, cartLocal.getCartHeaderMsg());
 					Pages.waitForPageLoad(driver);
+					Pages.takeSS(driver, "PurchaseTests_CartProd"+i+"_Added");
 					cartLocal.getContinueShoppingButton().click();
 				}
 				node.log(LogStatus.PASS, "Adding product : " + prods.get(i) + " was successful");
@@ -111,16 +113,20 @@ public class PurchaseTest extends TestCase {
 			cartPage.getCheckoutCartButton().click();
 			Pages.waitForLoadingSymbolCompletion(driver,
 					Pages.dynamicElementLocator(driver, By.className("se-pre-con")));
+			Pages.takeSS(driver, "PurchaseTests_CartProd_AddressPage");
 			cartPage.getSelectAddressButton().click();
 			Pages.waitForLoadingSymbolCompletion(driver,
 					Pages.dynamicElementLocator(driver, By.className("se-pre-con")));
+			Pages.takeSS(driver, "PurchaseTests_CartProd_PaymentPage");
 			cartPage.getPayButton().click();
 			if (cartPage.getCartHeaderMsg().getText().equalsIgnoreCase("Your Order is Confirmed!!")) {
+				Pages.takeSS(driver, "PurchaseTests_OrderConfirmed");
 				node.log(LogStatus.PASS, "Successfully completed checking out products in the card");
 				extent.endTest(node);
 				logger.appendChild(node);
 				Assert.assertTrue(true, "\"Successfully completed checking out products in the card\"");
 			} else {
+				Pages.takeSS(driver, "PurchaseTests_OrderFailed");
 				Assert.assertTrue(false, "Product checkout has failed");
 			}
 		} catch (AssertionError ae) {

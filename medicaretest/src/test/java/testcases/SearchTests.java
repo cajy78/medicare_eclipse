@@ -52,6 +52,7 @@ public class SearchTests extends TestCase {
 	public TestStatus validateSearchByProductNameTest(ExtentReports extent, ExtentTest logger, ExtentTest node) {
 		TestStatus status;
 		try {
+			Pages.takeSS(driver, "SearchByProdName_searchValueEntered");
 			Assert.assertEquals(prod.getProductNameSearchResult().getText(), searchVal);
 			status = TestStatus.TEST_PASSED;
 			node.log(LogStatus.PASS, "Successfully found product '" + searchVal + "' during search tests");
@@ -145,6 +146,7 @@ public class SearchTests extends TestCase {
 	public TestStatus validateSearchByManufacturerTest(ExtentReports extent, ExtentTest logger, ExtentTest node) {
 		TestStatus status;
 		try {
+			Pages.takeSS(driver, "SearchByManufacturerName_searchValueEntered");
 			if (prod.getProductLists().size() > 0) {
 				status = TestStatus.TEST_PASSED;
 				node.log(LogStatus.PASS,

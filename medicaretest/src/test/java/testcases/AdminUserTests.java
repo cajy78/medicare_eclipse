@@ -53,6 +53,7 @@ public class AdminUserTests extends TestCase {
 			homePage.loginLinkClick();
 			loginPage = new Login(driver);
 			loginPage.enterLoginCredentials(usid, pswd);
+			Pages.takeSS(driver, "AdminUserTests_credentialsEntered");
 			loginPage.getLoginButton().click();
 			if (driver.getTitle().equalsIgnoreCase("Medicare - Home")) {
 				Pages.waitForLoadingSymbolCompletion(driver,
@@ -62,6 +63,7 @@ public class AdminUserTests extends TestCase {
 					extent.endTest(node);
 					logger.appendChild(node);
 					Assert.assertTrue(true, "Admin user site login was successful via : " + usid);
+					Pages.takeSS(driver, "AdminUserTests_AddProduct_SuccessfulLogin");
 				} else {
 					throw new SkipException("Login was successful; however, the account is not an admin account");
 				}
@@ -147,6 +149,7 @@ public class AdminUserTests extends TestCase {
 					} else {
 						throw new RuntimeException("Failed to run upload script");
 					}
+					Pages.takeSS(driver, "AdminUserTests_AddProduct_prodDetailsEntered");
 					prodMgmt.getSubmitButton().click();
 					node.log(LogStatus.PASS, "Product details for '" + prodDetails.get("ProdName")
 							+ "' was successfully entered on site");
@@ -197,6 +200,7 @@ public class AdminUserTests extends TestCase {
 				logger.appendChild(node);
 				Assert.assertTrue(true, "Product '" + prodName + "' has been successfully added to the product list");
 			} else {
+				Pages.takeSS(driver, "AdminUserTests_AddProduct_VerificationError");
 				Assert.assertTrue(false, "Adding Product '" + prodName + "' failed");
 			}
 		} catch (AssertionError ae) {

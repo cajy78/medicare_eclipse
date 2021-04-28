@@ -56,6 +56,7 @@ public class AccountTests extends TestCase {
 			this.pswd = pwd;
 			loginPage = new Login(driver);
 			loginPage.enterLoginCredentials(username, pwd);
+			Pages.takeSS(driver, "LoginTests_credentialsEntered");
 			loginPage.getLoginButton().click();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -67,6 +68,7 @@ public class AccountTests extends TestCase {
 		ExtentTest errorNode = extent.startTest("Check login error message");
 		try {
 			if (pageTitle.equals("Medicare - Login")) {
+				Pages.takeSS(driver, "LoginTests_LoginUnSuccessful");
 				// Validate login error test - Error message: Username and Password is invalid!
 				node.log(LogStatus.ERROR,
 						"Login has failed with supplied credentials. Username: " + uName + " Password: " + pswd);
@@ -79,6 +81,9 @@ public class AccountTests extends TestCase {
 				logger.appendChild(errorNode);
 				Assert.assertEquals(loginMsg, "Username and Password is invalid!");
 			} else if (pageTitle.equals("Medicare - Home")) {
+				Pages.waitForLoadingSymbolCompletion(driver,
+						Pages.dynamicElementLocator(driver, By.className("se-pre-con")));
+				Pages.takeSS(driver, "LoginTests_LoginSuccessful");
 				errorNode.log(LogStatus.INFO, "Error test skipped since login was successful");
 				extent.endTest(errorNode);
 				node.log(LogStatus.PASS,
@@ -133,10 +138,12 @@ public class AccountTests extends TestCase {
 				signUpPage.getContactNumberTF().sendKeys(userDetails.get("Contact Number"));
 				signUpPage.getPasswordTF().sendKeys(userDetails.get("Password"));
 				signUpPage.getConfirmPasswordTF().sendKeys(userDetails.get("Password"));
+				Pages.takeSS(driver, "SignupTests_PersonalDetailsEntered");
 				signUpPage.getSubmitPageOneButton().click();
 				Pages.waitForLoadingSymbolCompletion(driver,
 						Pages.dynamicElementLocator(driver, By.className("se-pre-con")));
 				if (checkVerificationMessage()) {
+					Pages.takeSS(driver, "SignupTests_PersonalDetails_VerificationError");
 					throw new RuntimeException("Personal details were successfully entered and submitted; however, "
 							+ "A data entry verification error message was displayed while trying to submit the entered values.");
 				} else {
@@ -155,10 +162,12 @@ public class AccountTests extends TestCase {
 				signUpPage.getPostalCodeTF().sendKeys(userDetails.get("Postal Code"));
 				signUpPage.getStateTF().sendKeys(userDetails.get("State"));
 				signUpPage.getCountryTF().sendKeys(userDetails.get("Country"));
+				Pages.takeSS(driver, "SignupTests_AddressDetailsEntered");
 				signUpPage.getSubmitPageTwoButton().click();
 				Pages.waitForLoadingSymbolCompletion(driver,
 						Pages.dynamicElementLocator(driver, By.className("se-pre-con")));
 				if (checkVerificationMessage()) {
+					Pages.takeSS(driver, "SignupTests_AddressDetails_VerificationError");
 					throw new RuntimeException("Address details were successfully entered submitted; however, "
 							+ "A data entry verification error message was displayed while trying to submit the entered values.");
 				} else {
@@ -171,6 +180,7 @@ public class AccountTests extends TestCase {
 				}
 			} else if (pageNum.equals(SignUpPage.PAGETHREE)) {
 				node = extent.startTest("Account Sign up confirm details Test for : " + userDetails.get("Email"));
+				Pages.takeSS(driver, "SignupTests_ConfirmDetailsPage");
 				signUpPage.getConfirmPageThreeButton().click();
 				Pages.waitForLoadingSymbolCompletion(driver,
 						Pages.dynamicElementLocator(driver, By.className("se-pre-con")));
@@ -182,6 +192,7 @@ public class AccountTests extends TestCase {
 						+ " has been successfully completed");
 			} else if (pageNum.equals(SignUpPage.PAGEFOUR)) {
 				node = extent.startTest("Navigate to login page");
+				Pages.takeSS(driver, "SignupTests_Completed_LoginButton");
 				signUpPage.getLoginPageFourButton().click();
 				System.out.println(driver.getTitle());
 				if (driver.getTitle().equals("Medicare - Login")) {
