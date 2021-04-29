@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 		monochrome = true,
 		plugin = {"pretty", "html:target/cucumber-html", "json:target/cucumber.json"},
 		features = "src/test/java/features",
-		tags = "@Login",
+//		tags = "@AdminUser",
 		glue = {"stepdef"}
 		)
 

@@ -1,52 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="3" failed="0" ignored="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42535" started-at="2021-04-29T10:59:57 IST" finished-at="2021-04-29T11:00:40 IST">
+  <suite name="Default suite" duration-ms="4466" started-at="2021-04-29T14:57:22 IST" finished-at="2021-04-29T14:57:27 IST">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="42535" started-at="2021-04-29T10:59:57 IST" finished-at="2021-04-29T11:00:40 IST">
+    <test name="Default test" duration-ms="4466" started-at="2021-04-29T14:57:22 IST" finished-at="2021-04-29T14:57:27 IST">
       <class name="testcases.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testcases.TestRunner@4b553d26]" name="setUpClass" is-config="true" duration-ms="1912" started-at="2021-04-29T10:59:58 IST" finished-at="2021-04-29T10:59:59 IST">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testcases.TestRunner@4b553d26]" name="setUpClass" is-config="true" duration-ms="1608" started-at="2021-04-29T14:57:22 IST" finished-at="2021-04-29T14:57:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" duration-ms="26874" started-at="2021-04-29T11:00:00 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-29T11:00:26 IST">
+        <test-method status="SKIP" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" duration-ms="1913" started-at="2021-04-29T14:57:24 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-29T14:57:26 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User login to account on Medicare"]]>
+                <![CDATA["Admin user adds a product"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Enable Users To Login To Account]"]]>
+                <![CDATA["Optional[Admin user add product]"]]>
               </value>
             </param>
           </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+at ✽.admin user successfully signs in to the site with vk@gmail.com and admin(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" duration-ms="13206" started-at="2021-04-29T11:00:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-29T11:00:40 IST">
+        <test-method status="SKIP" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" duration-ms="256" started-at="2021-04-29T14:57:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-29T14:57:26 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User login to account on Medicare"]]>
+                <![CDATA["Admin user adds a product"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Enable Users To Login To Account]"]]>
+                <![CDATA["Optional[Admin user add product]"]]>
               </value>
             </param>
           </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+at ✽.admin user successfully signs in to the site with kn@gmail.com and 12345(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testcases.TestRunner@4b553d26]" name="tearDownClass" is-config="true" duration-ms="400" started-at="2021-04-29T11:00:40 IST" finished-at="2021-04-29T11:00:40 IST">
+        <test-method status="SKIP" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcases.TestRunner@4b553d26]" name="runScenario" duration-ms="214" started-at="2021-04-29T14:57:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-29T14:57:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin user adds a product"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Admin user add product]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+at ✽.admin user successfully signs in to the site with vk@gmail.com and admin(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testcases.TestRunner@4b553d26]" name="tearDownClass" is-config="true" duration-ms="349" started-at="2021-04-29T14:57:26 IST" finished-at="2021-04-29T14:57:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

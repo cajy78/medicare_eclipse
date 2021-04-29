@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 29 10:59:57 IST 2021</td>
+<td>Started on:</td><td>Thu Apr 29 14:57:22 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>42 seconds (42535 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4466 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,22 +67,54 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testcases.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login to account on Medicare", "Optional[Enable Users To Login To Account]"</td>
-<td></td>
-<td>26</td>
+<td title='testcases.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testcases.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin user adds a product", "Optional[Admin user add product]"</td>
+<td><div><pre>org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ?.admin user successfully signs in to the site with vk@gmail.com and admin(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace686349795", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace686349795'><pre>org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ?.admin user successfully signs in to the site with vk@gmail.com and admin(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+</pre></div></td>
+<td>1</td>
 <td>testcases.TestRunner@4b553d26</td></tr>
 <tr>
-<td title='testcases.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testcases.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login to account on Medicare", "Optional[Enable Users To Login To Account]"</td>
-<td></td>
-<td>13</td>
+<td title='testcases.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testcases.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin user adds a product", "Optional[Admin user add product]"</td>
+<td><div><pre>org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ?.admin user successfully signs in to the site with kn@gmail.com and 12345(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1449772539", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1449772539'><pre>org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ?.admin user successfully signs in to the site with kn@gmail.com and 12345(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+</pre></div></td>
+<td>0</td>
+<td>testcases.TestRunner@4b553d26</td></tr>
+<tr>
+<td title='testcases.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testcases.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin user adds a product", "Optional[Admin user add product]"</td>
+<td><div><pre>org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ?.admin user successfully signs in to the site with vk@gmail.com and admin(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace288306765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace288306765'><pre>org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ?.admin user successfully signs in to the site with vk@gmail.com and admin(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+</pre></div></td>
+<td>0</td>
 <td>testcases.TestRunner@4b553d26</td></tr>
 </table><p>
 </body>

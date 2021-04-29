@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\cajy7\AppData\Local\Temp\testng-eclipse-458934211\testng-customsuite.xml</span>
+                    <span>C:\Users\cajy7\AppData\Local\Temp\testng-eclipse-997112408\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,26 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,  3 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testcases.TestRunner" hash-for-method="runScenario(&quot;User login to account on Medicare&quot;, &quot;Optional[Enable Users To Login To Account]&quot;)">runScenario("User login to account on Medicare", "Optional[Enable Users To Login To Account]")</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testcases.TestRunner" hash-for-method="runScenario(&quot;Admin user adds a product&quot;, &quot;Optional[Admin user add product]&quot;)">runScenario("Admin user adds a product", "Optional[Admin user add product]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testcases.TestRunner" hash-for-method="runScenario(&quot;User login to account on Medicare&quot;, &quot;Optional[Enable Users To Login To Account]&quot;)">runScenario("User login to account on Medicare", "Optional[Enable Users To Login To Account]")</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testcases.TestRunner" hash-for-method="runScenario(&quot;Admin user adds a product&quot;, &quot;Optional[Admin user add product]&quot;)">runScenario("Admin user adds a product", "Optional[Admin user add product]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testcases.TestRunner" hash-for-method="runScenario(&quot;Admin user adds a product&quot;, &quot;Optional[Admin user add product]&quot;)">runScenario("Admin user adds a product", "Optional[Admin user add product]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -124,38 +129,66 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">testcases.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User login to account on Medicare&quot;, &quot;Optional[Enable Users To Login To Account]&quot;)">
-                  </a> <!-- runScenario("User login to account on Medicare", "Optional[Enable Users To Login To Account]") -->
+                  <a name="runScenario(&quot;Admin user adds a product&quot;, &quot;Optional[Admin user add product]&quot;)">
+                  </a> <!-- runScenario("Admin user adds a product", "Optional[Admin user add product]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User login to account on Medicare", "Optional[Enable Users To Login To Account]")</span>
+                  <span class="parameters">("Admin user adds a product", "Optional[Admin user add product]")</span>
+                  <div class="stack-trace">org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ✽.admin user successfully signs in to the site with kn@gmail.com and 12345(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User login to account on Medicare&quot;, &quot;Optional[Enable Users To Login To Account]&quot;)">
-                  </a> <!-- runScenario("User login to account on Medicare", "Optional[Enable Users To Login To Account]") -->
+                  <a name="runScenario(&quot;Admin user adds a product&quot;, &quot;Optional[Admin user add product]&quot;)">
+                  </a> <!-- runScenario("Admin user adds a product", "Optional[Admin user add product]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User login to account on Medicare", "Optional[Enable Users To Login To Account]")</span>
+                  <span class="parameters">("Admin user adds a product", "Optional[Admin user add product]")</span>
+                  <div class="stack-trace">org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ✽.admin user successfully signs in to the site with vk@gmail.com and admin(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Admin user adds a product&quot;, &quot;Optional[Admin user add product]&quot;)">
+                  </a> <!-- runScenario("Admin user adds a product", "Optional[Admin user add product]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Admin user adds a product", "Optional[Admin user add product]")</span>
+                  <div class="stack-trace">org.testng.SkipException: Test skipped since AutoIT scripts can currenlty only run on local instances of browsers and not on remote webdrivers via Selenium Grid via this framework
+	at testcases.AdminUserTests.initiateAdminUserTests(AdminUserTests.java:38)
+	at stepdef.AdminUserAddMedicine.admin_user_successfully_signs_in_to_the_site_with_and(AdminUserAddMedicine.java:34)
+	at ✽.admin user successfully signs in to the site with vk@gmail.com and admin(file:///C:/Users/cajy7/OneDrive/Documents/Studies_and_Certs/Automation_Testing_Masters/Phase_5%20Capstone/Assessment/Project/medicaretest/src/test/java/features/AdminUserAddMedicine.feature:5)
+
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\cajy7\AppData\Local\Temp\testng-eclipse-458934211\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\cajy7\AppData\Local\Temp\testng-eclipse-997112408\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -212,20 +245,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testcases.TestRunner')
-data.setCell(0, 3, 26874);
+data.setCell(0, 3, 1913);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'testcases.TestRunner')
-data.setCell(1, 3, 13206);
+data.setCell(1, 3, 256);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'testcases.TestRunner')
+data.setCell(2, 3, 214);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 40 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -257,16 +294,20 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("User login to account on Medicare", "Optional[Enable Users To Login To Account]")</span>
-                <span class="method-start">1978 ms</span>
+                <span class="method-name">runScenario("Admin user adds a product", "Optional[Admin user add product]")</span>
+                <span class="method-start">1655 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User login to account on Medicare", "Optional[Enable Users To Login To Account]")</span>
-                <span class="method-start">28862 ms</span>
+                <span class="method-name">runScenario("Admin user adds a product", "Optional[Admin user add product]")</span>
+                <span class="method-start">3581 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Admin user adds a product", "Optional[Admin user add product]")</span>
+                <span class="method-start">3841 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">42074 ms</span>
+                <span class="method-start">4063 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

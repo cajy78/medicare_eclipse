@@ -29,11 +29,14 @@ public class AdminUserTests extends TestCase {
 	private ProductManagement prodMgmt;
 
 	public void initiateAdminUserTests() throws Throwable {
-		if (System.getProperty("os.name").equalsIgnoreCase("Windows 10")) {
+		if (System.getProperty("os.name").equalsIgnoreCase("Windows 10") && !TestingProperties.remoteDriverEnabled()) {
 			initiateDriver();
 			driver.get(TestingProperties.getWebsiteURL());
 			Pages.waitForLoadingSymbolCompletion(driver,
 					Pages.dynamicElementLocator(driver, By.className("se-pre-con")));
+		} else if (TestingProperties.remoteDriverEnabled()) {
+			throw new SkipException("Test skipped since AutoIT scripts can currenlty only run on local instances "
+					+ "of browsers and not on remote webdrivers via Selenium Grid via this framework");
 		} else {
 			System.out.println(System.getProperty("os.name"));
 			throw new SkipException("Admin User Add Product details test has been skipped since the "
@@ -142,10 +145,14 @@ public class AdminUserTests extends TestCase {
 					prodMgmt.getCategoryIdDropDown().sendKeys(prodDetails.get("Category"));
 					JavascriptExecutor executor = (JavascriptExecutor) driver;
 					executor.executeScript("arguments[0].click();", prodMgmt.getFileUpload());
-					if (TestingProperties.getAutoITScript() != null) {
+					if (TestingProperties.getAutoITScript() != null && !TestingProperties.remoteDriverEnabled()) {
 						Thread.sleep(3000);
 						Runtime.getRuntime().exec(TestingProperties.getAutoITScript());
 						Thread.sleep(3000);
+					} else if (TestingProperties.remoteDriverEnabled()) {
+						throw new SkipException(
+								"Test skipped since AutoIT scripts can currenlty only run on local instances "
+										+ "of browsers and not on remote webdrivers via Selenium Grid");
 					} else {
 						throw new RuntimeException("Failed to run upload script");
 					}
@@ -177,6 +184,15 @@ public class AdminUserTests extends TestCase {
 			extent.close();
 			exit();
 			throw ne;
+		} catch (SkipException se) {
+			node.log(LogStatus.SKIP, se.getMessage());
+			extent.endTest(node);
+			logger.appendChild(node);
+			extent.endTest(logger);
+			extent.flush();
+			extent.close();
+			exit();
+			throw se;
 		} catch (Exception e) {
 			node.log(LogStatus.ERROR, e.getMessage());
 			extent.endTest(node);
