@@ -38,6 +38,14 @@ public class TestingProperties {
 		getPropertiesFile();
 		return prop.getProperty("designatedBrowser.type");
 	}
+	
+	public static boolean remoteDriverEnabled() {
+		getPropertiesFile();
+		boolean remoteBrowser = false;
+		if(prop.getProperty("remote.enabled").equals("true"))
+			remoteBrowser=true;
+		return remoteBrowser;
+	}
 
 	public static String getLoadAndWaitTimeout() {
 		getPropertiesFile();

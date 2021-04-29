@@ -14,10 +14,10 @@ public class TestCase {
 
 		switch (TestingProperties.getDesignatedBrowser()) {
 		case "chrome":
-			driver = SeleniumProperties.getBrowser(BrowserType.LOCALCHROME);
+			driver = SeleniumProperties.getBrowser(BrowserType.CHROME);
 			break;
 		case "firefox":
-			driver = SeleniumProperties.getBrowser(BrowserType.LOCALFIREFOX);
+			driver = SeleniumProperties.getBrowser(BrowserType.FIREFOX);
 			break;
 		default:
 			throw new RuntimeException("Browser type entered in properties does not match the allowed pattern");

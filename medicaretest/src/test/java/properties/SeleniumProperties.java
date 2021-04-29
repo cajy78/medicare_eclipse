@@ -16,17 +16,25 @@ public class SeleniumProperties {
 	private static WebDriver driver;
 
 	public static WebDriver getBrowser(BrowserType browserType) throws Throwable {
-		switch (browserType) {
-		case LOCALCHROME:
-			return getLocalChromeBrowser();
-		case LOCALFIREFOX:
-			return getLocalFirefoxBrowser();
-		case REMOTECHROME:
-			return getRemoteChromeBrowser();
-		case REMOTEFIREFOX:
-			return getRemoteFirefoxBrowser();
-		default:
-			throw new RuntimeException("Incorrect browser type selected");
+
+		if (TestingProperties.remoteDriverEnabled()) {
+			switch (browserType) {
+			case CHROME:
+				return getRemoteChromeBrowser();
+			case FIREFOX:
+				return getRemoteFirefoxBrowser();
+			default:
+				throw new RuntimeException("Incorrect browser type selected");
+			}
+		} else {
+			switch (browserType) {
+			case CHROME:
+				return getLocalChromeBrowser();
+			case FIREFOX:
+				return getLocalFirefoxBrowser();
+			default:
+				throw new RuntimeException("Incorrect browser type selected");
+			}
 		}
 	}
 
@@ -40,7 +48,7 @@ public class SeleniumProperties {
 	private static WebDriver getLocalFirefoxBrowser() {
 		System.setProperty("webdriver.gecko.driver", TestingProperties.getWinDriverLocation() + "/geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 //		driver.manage().timeouts().implicitlyWait(Long.parseLong(TestingProperties.getLoadAndWaitTimeout()), TimeUnit.SECONDS);
 		return driver;
 	}

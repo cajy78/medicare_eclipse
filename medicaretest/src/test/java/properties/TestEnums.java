@@ -11,7 +11,7 @@ public class TestEnums {
 	}
 
 	public enum BrowserType {
-		LOCALCHROME, LOCALFIREFOX, REMOTECHROME, REMOTEFIREFOX;
+		CHROME, FIREFOX, SAFARI, OPERA, IE;
 	}
 	
 	public enum SignUpPage{
