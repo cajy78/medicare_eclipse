@@ -48,7 +48,7 @@ public class SeleniumProperties {
 	private static WebDriver getLocalFirefoxBrowser() {
 		System.setProperty("webdriver.gecko.driver", TestingProperties.getWinDriverLocation() + "/geckodriver.exe");
 		driver = new FirefoxDriver();
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 //		driver.manage().timeouts().implicitlyWait(Long.parseLong(TestingProperties.getLoadAndWaitTimeout()), TimeUnit.SECONDS);
 		return driver;
 	}

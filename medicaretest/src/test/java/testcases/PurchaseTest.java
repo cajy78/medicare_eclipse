@@ -20,7 +20,6 @@ public class PurchaseTest extends TestCase {
 	private Home homePage;
 	private Login loginPage;
 	private Cart cartPage;
-	private String user;
 
 	public void initiatePurchaseTest() throws Throwable {
 		initiateDriver();
@@ -31,7 +30,6 @@ public class PurchaseTest extends TestCase {
 	public void registedUserLogin(String uname, String pwd, ExtentReports extent, ExtentTest logger, ExtentTest node) {
 		try {
 			node = extent.startTest("Initiate site login with : " + uname);
-			this.user = uname;
 			homePage = new Home(driver);
 			homePage.loginLinkClick();
 			loginPage = new Login(driver);
@@ -85,7 +83,6 @@ public class PurchaseTest extends TestCase {
 					Cart cartLocal = new Cart(driver);
 					cartLocal.waitForInvisbilityOfElement(driver, cartLocal.getCartHeaderMsg());
 					Pages.waitForPageLoad(driver);
-					Pages.takeSS(driver, "PurchaseTests_CartProd"+i+"_Added");
 					cartLocal.getContinueShoppingButton().click();
 				}
 				node.log(LogStatus.PASS, "Adding product : " + prods.get(i) + " was successful");
@@ -110,6 +107,7 @@ public class PurchaseTest extends TestCase {
 			node = extent.startTest("Cart checkout");
 			cartPage = new Cart(driver);
 			cartPage.waitForInvisbilityOfElement(driver, cartPage.getCartHeaderMsg());
+			Pages.takeSS(driver, "PurchaseTests_Cart");
 			cartPage.getCheckoutCartButton().click();
 			Pages.waitForLoadingSymbolCompletion(driver,
 					Pages.dynamicElementLocator(driver, By.className("se-pre-con")));

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Medicare_Test_Suite">
     <classes>
-      <class name="testcases.TestRunner"/>
+      <class name="runner.TestRunner"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

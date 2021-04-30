@@ -1,4 +1,4 @@
-package testcases;
+package runner;
 
 import org.testng.annotations.Test;
 

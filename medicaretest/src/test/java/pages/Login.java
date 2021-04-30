@@ -11,8 +11,6 @@ import properties.TestingProperties;
 
 public class Login extends Pages {
 
-	private WebDriver driver;
-
 	@FindBy(how = How.ID, using = "username")
 	private WebElement userName;
 
@@ -26,7 +24,6 @@ public class Login extends Pages {
 	private WebElement loginErrorMsg;
 
 	public Login(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(
 				new AjaxElementLocatorFactory(driver, Integer.parseInt(TestingProperties.getLoadAndWaitTimeout())),
 				this);
