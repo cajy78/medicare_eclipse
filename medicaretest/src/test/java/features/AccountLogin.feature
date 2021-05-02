@@ -8,6 +8,6 @@ Feature: Enable Users To Login To Account
     Then navigates to home page if credentials are correct or displays login error for incorrect credentials
 
     Examples: 
-      | emailaddress | pwd    |
-      | kn@gmail.com | 123456 |
-      | vk@gmail.com | admin  |
+      | emailaddress | pwd   |
+      | kn@gmail.com | 12345 |
+      | vk@gmail.com | admin |

@@ -13,4 +13,3 @@ Feature: Enable searching for products via product name
       | Combiflame  |
       | Paracetamol |
       | Amoxicillin |
-      | test        |
