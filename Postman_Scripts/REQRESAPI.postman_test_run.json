@@ -1,0 +1,246 @@
+{
+	"id": "9cdc1b2f-cb0f-4612-b764-2866901caeff",
+	"name": "REQRESAPI",
+	"timestamp": "2021-05-02T14:26:51.970Z",
+	"collection_id": "51c0bdcf-8597-4175-be8f-909eb7545c7a",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 12,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "a3206259-0089-4457-a2d2-dd94f0ddafec",
+			"name": "GetListOfUsersRequest",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 121,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code 200": true,
+				"Page ID": true,
+				"Header Content Type": true
+			},
+			"testPassFailCounts": {
+				"Status Code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Page ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Header Content Type": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				121
+			],
+			"allTests": [
+				{
+					"Status Code 200": true,
+					"Page ID": true,
+					"Header Content Type": true
+				}
+			]
+		},
+		{
+			"id": "93a4ca4a-1a99-4820-90c4-0ee21ca54986",
+			"name": "SingleUserNotFoundReqest",
+			"url": "https://reqres.in/api/users/23",
+			"time": 190,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				190
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "d7e4c5f7-8e80-4f47-8674-34e7b469caa9",
+			"name": "CreateUserRequest",
+			"url": "https://reqres.in/api/users",
+			"time": 192,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"User Account Name": true,
+				"User to have Job": true,
+				"User to have ID": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User Account Name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User to have Job": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User to have ID": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				192
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"User Account Name": true,
+					"User to have Job": true,
+					"User to have ID": false
+				}
+			]
+		},
+		{
+			"id": "0663d2bf-ccda-4eff-ad6b-cf9d21a23028",
+			"name": "RegisterUserPostRequest",
+			"url": "https://reqres.in/api/register",
+			"time": 188,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check token": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check token": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				188
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check token": true
+				}
+			]
+		},
+		{
+			"id": "b5acea53-0670-43fd-a11b-94020ba7d81f",
+			"name": "UpdateUserRequest",
+			"url": "https://reqres.in/api/users/2",
+			"time": 189,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check Updated Job": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check Updated Job": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check Updated Job": true
+				}
+			]
+		},
+		{
+			"id": "57f900c3-fed0-4a5b-bd1f-97ae2e734406",
+			"name": "DeleteUserRequest",
+			"url": "https://reqres.in/api/users/2",
+			"time": 187,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				187
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1067,
+	"collection": {
+		"requests": [
+			{
+				"id": "a3206259-0089-4457-a2d2-dd94f0ddafec",
+				"method": "GET"
+			},
+			{
+				"id": "93a4ca4a-1a99-4820-90c4-0ee21ca54986",
+				"method": "GET"
+			},
+			{
+				"id": "d7e4c5f7-8e80-4f47-8674-34e7b469caa9",
+				"method": "POST"
+			},
+			{
+				"id": "0663d2bf-ccda-4eff-ad6b-cf9d21a23028",
+				"method": "POST"
+			},
+			{
+				"id": "b5acea53-0670-43fd-a11b-94020ba7d81f",
+				"method": "PUT"
+			},
+			{
+				"id": "57f900c3-fed0-4a5b-bd1f-97ae2e734406",
+				"method": "DELETE"
+			}
+		]
+	}
+}

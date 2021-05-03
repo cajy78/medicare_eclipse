@@ -1,0 +1,222 @@
+{
+	"id": "ba47d22a-f1d1-4155-9f7d-5d31ed41eccb",
+	"name": "PETSTORE_SWAGGER_API",
+	"timestamp": "2021-05-02T14:23:19.283Z",
+	"collection_id": "5cad8ac5-4daa-442b-9a0d-3ddaf9212897",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 7,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "eaee9182-f266-401f-9c5f-c714eea77286",
+			"name": "GETPetStatus_available",
+			"url": "https://petstore.swagger.io/v2/pet/findByStatus?status=available",
+			"time": 198,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check any pet should be available": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check any pet should be available": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				198
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check any pet should be available": true
+				}
+			]
+		},
+		{
+			"id": "b361a8dc-1e79-4b9b-94b6-c8483dd4e8a0",
+			"name": "GETPetStatus_sold",
+			"url": "https://petstore.swagger.io/v2/pet/findByStatus?status=sold",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check any pet should be sold": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check any pet should be sold": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check any pet should be sold": true
+				}
+			]
+		},
+		{
+			"id": "6cbe6c29-d23a-4eb7-8007-da81c2d42b35",
+			"name": "GETPetStatus_pending",
+			"url": "https://petstore.swagger.io/v2/pet/findByStatus?status=pending",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check any pet should be pending": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check any pet should be pending": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check any pet should be pending": true
+				}
+			]
+		},
+		{
+			"id": "7613cdb4-6c91-444f-ad76-403f70978483",
+			"name": "POSTAddNewPet",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful POST request": false
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Successful POST request": false
+				}
+			]
+		},
+		{
+			"id": "1e08a0da-2793-4c9f-96dd-801bfb3ce25e",
+			"name": "PUTUpdatePetDetails",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b49b3f8a-5172-40e3-82c7-4034e3b4f253",
+			"name": "POSTStoreOrder",
+			"url": "https://petstore.swagger.io/store/order",
+			"time": 13,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Successful POST request": false
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Successful POST request": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 233,
+	"collection": {
+		"requests": [
+			{
+				"id": "eaee9182-f266-401f-9c5f-c714eea77286",
+				"method": "GET"
+			},
+			{
+				"id": "b361a8dc-1e79-4b9b-94b6-c8483dd4e8a0",
+				"method": "GET"
+			},
+			{
+				"id": "6cbe6c29-d23a-4eb7-8007-da81c2d42b35",
+				"method": "GET"
+			},
+			{
+				"id": "7613cdb4-6c91-444f-ad76-403f70978483",
+				"method": "POST"
+			},
+			{
+				"id": "1e08a0da-2793-4c9f-96dd-801bfb3ce25e",
+				"method": "PUT"
+			},
+			{
+				"id": "b49b3f8a-5172-40e3-82c7-4034e3b4f253",
+				"method": "POST"
+			}
+		]
+	}
+}
